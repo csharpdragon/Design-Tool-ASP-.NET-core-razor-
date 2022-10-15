@@ -1,0 +1,104 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.headerLogoImage {
+    height: 45px;
+    padding-top: 10px;
+    margin-left: 10vw;
+}
+#nav_toolbar{
+    z-index:999;
+}
+.modal-backdrop {
+    z-index: 1000;
+}
+.modal-content {
+    z-index: 3001;
+}
+
+.supportCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tabContainer{
+    overflow: auto;
+}
+.popupClass {
+    position: relative;
+    display: inline-block;
+    cursor: text;
+}
+
+ .popupContent {
+        visibility: hidden;
+        background-color: black;
+        color: red;
+        width: 200px;
+        text-align: center;
+        position: absolute;
+        z-index: 1;
+        border-radius: 10px;
+        padding: 10px 0;
+        bottom: 100%;
+        left: 30%;
+        margin-left: -100px;
+    }
+
+        /* Styling Popup arrow */
+
+  .popupContent::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 75%;
+            margin-left: -10px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+            border-style:
+           
+        }
+
+    /*hide and show the popup */
+
+.display {
+        visibility: visible;
+    }
+#preview_nav{
+    position:absolute;
+}
+#main_content {
+    visibility: hidden;
+}
+.overlay-vistool {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.7)
+}
+
+#top_toolbar_placeholder_wrapper{
+    display: contents;
+}
+#top_toolbar_placeholder {
+    z-index: 500;
+}

@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Design</title>
+
+ 
+    <link rel="stylesheet" href="~/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="~/js/jquery.color.js"></script>
+    <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+
+    <link href="//fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap" media="screen" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="~/css/easy.css?2.11" rel="stylesheet" type="text/css" title="main" />
+    <link href="~/css/default.css?2.11" rel="stylesheet" type="text/css" html-canvas-ignore />
+
+    <link href="~/css/dt.ui-up.css?2.11" rel="stylesheet" type="text/css" html-canvas-ignore />
+    
+    <link rel="stylesheet" href="~/dropzone.css" type="text/css" />  
+    <link rel="stylesheet" href="~/css/components.css" />
+    <link rel="stylesheet" href="~/css/forcanvas.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <div class="header-log-container  col-md-4 col-sm-5 col-xs-5">
+                    <a class="header-log-link" asp-page="/pages/Index" >
+                         <img class="headerLogoImage" src="~/img/uprinting-logo.39ba2d2d.svg"/>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Design - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+    <div class="site-main-container" id="main_content">
+<div class="overlay-vistool">
+                    <div class="vistool-webgl" style="width: 1000px; height: 714px;">
+                    <canvas width="1000"  height="714" style="width: 1000px; height: 714px;"></canvas>
+                </div>
+    
+    </div>
+    <div id="preview_bar">
+        <div class="toolbar-button type5 dt-base-gradient with-active"
+            style="float: right;">
+            <div class="button-icon" style="background-position: -216px -16px"></div>
+            <div class="button-text">Close Preview</div>
+        </div>
+        <div id="preview_nav">
+            <div class="preview-navigation-item dt-base-gradient with-active on"
+                __cporiginalvalueofinnerhtml="Front Side" id="preview_nav_0">Front Side</div>
+            <div class="preview-navigation-item dt-base-gradient with-active" __cporiginalvalueofinnerhtml="Back Side"
+                id="preview_nav_1">Back Side</div>
+        </div>
+    </div>
+</div>
+
+ 
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

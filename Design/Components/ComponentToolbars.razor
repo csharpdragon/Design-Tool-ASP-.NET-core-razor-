@@ -1,0 +1,209 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+
+<div class="float-toolbar ztoolbar" id="crop_toolbar" html-canvas-ignore>
+    <div>
+        <div class="crop-toolbar-item" style="background-position: 100px 100px ;"></div>
+        <div class="crop-toolbar-item" style="background-position: -1120px 0px ;" onclick="moveInnerImage('U')"></div>
+        <div class="crop-toolbar-item" style="background-position: 100px 100px ;"></div>
+    </div>
+    <div>
+        <div class="crop-toolbar-item" style="background-position: -1104px 0px ;" onclick="moveInnerImage('L')"></div>
+        <div class="crop-toolbar-item" style="background-position: 100px 100px ;"></div>
+        <div class="crop-toolbar-item" style="background-position: -1136px 0px ;" onclick="moveInnerImage('R')"></div>
+        <div class="crop-toolbar-item" style="background-position: 100px 100px ;"></div>
+        <div class="crop-toolbar-item" style="background-position: -1168px 0px ;" onclick="zoomOutInnerImage()"><span>Zoom Out</span></div>
+        <div class="crop-toolbar-item" style="width:auto; background-position: 100px 100px ; cursor:default" ><div id="crop_slider"></div></div>
+        <div class="crop-toolbar-item" style="background-position: -1184px 0px ;" onclick="zoomInInnerImage()"><span>Zoom In</span></div>
+        <div class="crop-toolbar-item" style="background-position: 100px 100px ;"></div>
+        <div class="crop-toolbar-item" style="background-position: -688px 0px ;" onclick="rotateInnerImage(90)"><span>Rotate 90&deg;</span></div>
+        <div class="crop-toolbar-item" style="background-position: -704px 0px ;" onclick="rotateInnerImage(-90)"><span>Rotate 90&deg;</span></div>
+    </div>
+    <div>
+        <div class="crop-toolbar-item" style="background-position: 100px 100px ;"></div>
+        <div class="crop-toolbar-item" style="background-position: -1152px 0px ;" onclick="moveInnerImage('D')"></div>
+        <div class="crop-toolbar-item" style="background-position: 100px 100px ;"></div>
+    </div>
+    
+    <div id="extra_crop_option" >
+        <div id="btn_text_remove" class="toolbar-button type6 dt-base-gradient" >
+            <div class="button-icon" style="background-position: -400px 0 " ></div>
+        </div>
+
+        <div id="btn_text_remove" class="toolbar-button type6 dt-base-gradient"  onclick="replacePhImage()">
+            <div class="button-text">Replace Image</div>
+        </div>
+        <div class="crop-toolbar-item" style="background-position: 100px 100px ;"></div>
+
+        <div id="btn_crop_done" class="toolbar-button type6 dt-proceed-button" >
+            <div class="button-text">Done</div>
+        </div>
+ 
+    </div>
+    
+</div>
+
+<div class="float-toolbar ztoolbar" id="image_toolbar" html-canvas-ignore>
+    <div id="btn_image_delete" class="toolbar-button type2 dt-base-gradientt with-active" >
+        <div class="button-icon" style="background-position: -400px 0px"></div>
+        <div class="button-text">Delete</div>
+    </div>
+
+    <div id="btn_image_crop" class="toolbar-button type2 dt-base-gradientt with-active" >
+        <div class="button-icon" style="background-position: -336px 0px"></div>
+        <div class="button-text">Crop</div>
+    </div>
+
+    <div id="btn_image_border_color" class="toolbar-button type2 has-menu menu-opener dt-base-gradientt with-active" >
+        <div class="selected-color"  data-jscolor="{}" ></div>
+        <div class="button-text">Border</div>
+        <div id="image_border_color_menu">
+        </div>
+    </div>
+
+    <div class="toolbar-button type2 has-menu menu-opener dt-base-gradientt with-active" >
+        <div class="button-icon" style="background-position: -512px 0px" ></div>
+        <div class="button-text">Weight</div>
+        <div id="image_border_width_menu" class="button-menu" style="top: auto;"><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="0pt">0pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="1pt">1pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="2pt">2pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="3pt">3pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="4pt">4pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="5pt">5pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="6pt">6pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="8pt">8pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="10pt">10pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="12pt">12pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="14pt">14pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="16pt">16pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="18pt">18pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="20pt">20pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="24pt">24pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text" __cporiginalvalueofinnerhtml="40pt">40pt</div></div></div>
+    </div>
+
+    <div id="btn_image_rotate" class="toolbar-button type2 dt-base-gradientt with-active" >
+        <div class="button-icon" style="background-position: -688px 0"></div>
+        <div class="button-text">Rotate</div>
+    </div>
+
+    <div id="svg_tools" class="toolbar-button type3 has-menu">
+        <div id="svg_colors"></div>
+        <div id="svg_color_menu" class="button-menu color-palette with-transparent">
+            <div class="colors-container">
+                                    <div class="hsv_map">
+                        <canvas class="surface" width="200" height="200"></canvas>
+                        <div class="cover"></div>
+                        <div class="hsv-cursor"></div>
+                        <div class="bar-bg"></div>
+                        <div class="bar-white"></div>
+                        <canvas class="luminanceBar" width="30" height="200"></canvas>
+                        <div class="hsv-barcursors" id="hsv_cursors">
+                            <div class="hsv-barcursor-l"></div>
+                            <div class="hsv-barcursor-r"></div>
+                        </div>
+                    </div>
+                    <div class='cmyk-panel'>
+                        <div class='cmyk-inputs'>
+                            <span>C</span>
+                            <span>M</span>
+                            <span>Y</span>
+                            <span>K</span>
+                            <input type="text" value="" class="cyan"/>
+                            <input type="text" value="" class="magenta"/>
+                            <input type="text" value="" class="yellow"/>
+                            <input type="text" value="" class="black"/>
+                        </div>
+                        <div class="color-preview">APPLY</div>
+                    </div>
+                            </div>
+        </div>
+    </div>
+
+    <div id="btn_image_opacity" class="toolbar-button type2 has-menu menu-opener opacity-feature" >
+        <div class="button-icon" style="background-position: -1233px 0px;" ></div>
+        <div class="button-text">Opacity</div>
+        <div id="image_opacity" class="opacity-slider button-menu">
+            <div class="opacity-range-bar">
+                <div class="opacity-slider-handle"></div>
+            </div>
+            <div class="opacity-value-indicator">100</div>
+        </div>
+    </div>
+
+    <div id="btn_modify_image_popup" style="display: none" class="toolbar-button type2" >
+        <div class="button-icon" style="background-position: -640px 0px;" ></div>
+        <div class="button-text">Modify</div>
+    </div>
+
+</div>
+
+
+<div class="float-toolbar ztoolbar" id="shape_toolbar" html-canvas-ignore>
+    <div id="btn_shape_delete" class="toolbar-button type2 dt-base-gradientt with-active" >
+        <div class="button-icon" style="background-position: -400px 0px"></div>
+        <div class="button-text">Delete</div>
+    </div>
+
+    <div id="btn_shape_fill_color" class="toolbar-button type2 has-menu menu-opener" >
+        <div class="selected-color" data-jscolor="{}"></div>
+        <div class="button-text">Fill</div>
+    </div>
+
+    <div id="btn_shape_border_color" class="toolbar-button type2 has-menu menu-opener" >
+        <div class="selected-color" data-jscolor="{}"></div>
+        <div class="button-text">Border</div>
+    </div>
+
+    <div class="toolbar-button type2 has-menu menu-opener" >
+        <div class="button-icon" style="background-position: -512px 0px" ></div>
+        <div class="button-text">Weight</div>
+        <div id="shape_border_width_menu" class="button-menu">
+            <div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">0pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">1pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">2pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">3pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">4pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">5pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">6pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">8pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">10pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">12pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">14pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">16pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">18pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">20pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">24pt</div></div><div class="toolbar-button type4 image-border-width-option"><div class="button-menu-text">40pt</div></div>
+        </div>
+    </div>
+
+    <div class="toolbar-button type2 has-menu menu-opener" >
+        <div class="button-icon" style="background-position: -528px 0px" ></div>
+        <div class="button-text">Stroke</div>
+        <div id="shape_border_stroke_menu" class="button-menu">
+            <div id="shape_border_stroke_solid" class="toolbar-button type4 shape-border-stroke-option" style="background-position: center -1px"></div>
+            <div id="shape_border_stroke_round_dot" class="toolbar-button type4 shape-border-stroke-option" style="background-position: center -15px"></div>
+            <div id="shape_border_stroke_square_dot" class="toolbar-button type4 shape-border-stroke-option" style="background-position: center -29px"></div>
+            <div id="shape_border_stroke_dash" class="toolbar-button type4 shape-border-stroke-option" style="background-position: center -43px"></div>
+            <div id="shape_border_stroke_dash_dot" class="toolbar-button type4 shape-border-stroke-option" style="background-position: center -58px"></div>
+            <div id="shape_border_stroke_long_dash" class="toolbar-button type4 shape-border-stroke-option" style="background-position: center -72px"></div>
+            <div id="shape_border_stroke_long_dash_dot" class="toolbar-button type4 shape-border-stroke-option" style="background-position: center -86px"></div>
+        </div>
+    </div>
+
+    <div id="btn_shape_opacity" class="toolbar-button type2 has-menu menu-opener opacity-feature" >
+        <div class="button-icon" style="background-position: -1233px 0px;" ></div>
+        <div class="button-text">Opacity</div>
+        <div id="shape_opacity" class="opacity-slider button-menu">
+            <div class="opacity-range-bar">
+                <div class="opacity-slider-handle"></div>
+            </div>
+            <div class="opacity-value-indicator">100</div>
+        </div>
+    </div>
+
+</div>
+
+
+@{
+    //ui draggable items
+}
+<div class="ztoolbar ui-draggable open" id="textbox_tools" style="z-index: 2510; left: 228px; top: 237px; display: block;">
+    <div id="btn_text_edit" class="toolbar-button type2 close-only">
+        <div class="button-icon" style="background-position: -352px 0px"></div>
+        <div class="button-text">Edit</div>
+    </div>
+    
+    <div class="open-only">
+    <div id="textbox_edit_area" style="display:block; margin-bottom: 10px">
+        <div id="textbox_tools_text_title" __cporiginalvalueofinnerhtml="Enter Text:">Enter Text:</div>
+        <textarea id="inline_textarea" style="height: 24px; width: 200px;"></textarea>
+    </div>
+
+    <div style="border-top: 0px solid #ddd; text-align: center; padding-top: 4px">
+        <div id="btn_text_remove" class="toolbar-button type6 dt-base-gradient">
+            <div class="button-icon" style="background-position: -400px 0 "></div>
+            <div class="button-text">Delete</div>
+        </div>
+
+        <div id="btn_text_done" class="toolbar-button type6 dt-proceed-button">
+            <div class="button-text">Done</div>
+        </div>
+
+    </div>
+    </div> 
+</div>
+@code {
+    
+}
+

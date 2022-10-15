@@ -1,0 +1,74 @@
+.tabContainer {
+    height: 65vh;
+    width: 51em;
+    border: 1px solid grey;
+}
+
+.imagesViewPart {
+    margin-top: 2em;
+    width: 46em;
+    display: block;
+    margin-left: 1em;
+}
+.imageItem{
+    position: relative;
+    display: inline-block;
+    width: 7em;
+    height:7.4em;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.viewImage {
+    border: 2px solid white;
+    padding: 3px;
+    height: 7em;
+    width: 7em;
+}
+.imgSelected {
+    border: 2px solid red;
+}
+.insertItemRight {
+    padding-left: 47em;
+}
+.modal-content{
+    border-radius: 0px;
+}
+.modal {
+    font-family: "Lato";
+}
+.insertImageText {
+    font-family: "Lato";
+    font-size: 18px;
+    font-weight: bold;
+    color:#333;
+    margin-left: 20em;
+}
+.dropzone {
+    width: 100%;
+    padding: 2px 20px;
+    min-height: 170px;
+    border: 3px dashed #03a74f;
+}
+#myTabContent {
+    padding: 10px 20px;
+}
+.uploadFilePart{
+    display: flex;
+    flex-direction: row;
+}
+.uploadFilePart > .orText {
+    padding-top: 0.8em;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+.uploadGuide{
+    margin-left: 3em;
+}
+.uploadGuide > .downletter {
+    font-size: 12px;
+}
+.close{
+    margin-left: 29.4em;
+    margin-top:0.3em;
+}

@@ -1,0 +1,15 @@
+.outlineElement > .dotelement {
+    width: 8px;
+    height: 8px;
+    border-radius: 50% 50%;
+    border: 1px solid black;
+    position: absolute;
+}
+
+.outlineElement > .squareElement {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border: 1px solid black;
+    position: absolute;
+}
