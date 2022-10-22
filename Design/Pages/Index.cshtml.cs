@@ -33,7 +33,26 @@ namespace Design.Pages
         public IList<ImagesInfo> ImagesInfoList { get; set; } = default!;
         [BindProperty]
         public List<int> fontSizeArray { get; set; } = default!;
-        
+      
+        public int mode = -1;
+        public void Mode1()
+        {
+            mode = 1;
+        }
+        public void Mode2()
+        {
+            mode = 2;
+        }
+        //       public void OnGetMode1()
+        //       {
+        //           mode = 0;
+        //            return Page();
+        //        }
+        //        public void OnGetMode2()
+        //        {
+        //            mode = 1;
+        //            return Page();
+        //       }
         public async Task<IActionResult> OnPostUpload(IFormFile file)
         {
             var fileDic = "Files";

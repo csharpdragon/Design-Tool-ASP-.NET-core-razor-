@@ -2,591 +2,610 @@
 @using Design.Components
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home page";    
 }
-
-<div id="workspace" >
-    <div class="toolbar ztoolbar" id="nav_toolbar">
-    <div class="top-nav-left" >
-        <div id="theme_options" class="toolbar-button type5 has-menu has-menu menu-opener" style="line-height:normal; display: none" >
-            <div class="button-icon button-arrow" style="vertical-align:text-bottom" ></div>
-            <div class="button-menu with-divider" id="theme_menu" ></div>
-        </div>
-
-        <div id="info_ph" >
-            <div id="info_design_title" ></div>
-            <div id="info_product_title" >5.5" x 2" Event Tickets</div>
-         </div>
-        
-    </div>      
-        
-   <div id="page_navigation"  >
-        <div class="page-navigation-item dt-base-gradient with-active on" id="page_navigation_0">Front Side</div>
-        <div class="page-navigation-item dt-base-gradient with-active" id="page_navigation_1">Back Side</div>
-   </div>
-
-   <div id="side_navigation"  ></div> 
-        
-    <div class="top-nav-right"  >
-        <div id="btn_preview" class="toolbar-button type8" >
-            <div class="button-icon" style="background-position: -72px -16px" ></div>
-            <div class="button-text" >Preview</div>
-        </div>
-       <div id="btn_saves" class="toolbar-button type8 has-menu menu-opener">
-            <div class="button-icon" style="background-position: 0px -16px"></div>
-            <div class="button-text">Save</div>
-            <div class="button-icon button-arrow"></div>
-
-            <div class="button-menu with-divider thick">
-                <div id="btn_save_2" class="toolbar-button type4">
-                    <div class="button-menu-icon" style="background-position: -592px 0px"></div>
-                    <div class="button-menu-text">Save</div>
+<div class="container">
+    <main role="main" class="pb-3">
+        <div id="workspace" >
+            <div class="toolbar ztoolbar" id="nav_toolbar">
+            <div class="top-nav-left" >
+                <div id="theme_options" class="toolbar-button type5 has-menu has-menu menu-opener" style="line-height:normal; display: none" >
+                    <div class="button-icon button-arrow" style="vertical-align:text-bottom" ></div>
+                    <div class="button-menu with-divider" id="theme_menu" ></div>
                 </div>
-                <div id="btn_save_as" class="toolbar-button type4">
-                    <div class="button-menu-icon" style="background-position: -608px 0px"></div>
-                    <div class="button-menu-text">Save As...</div>
-                </div> 
-                
-                
-            </div>
 
-        </div>
-                
-        <div id="btn_proceed" class="toolbar-button type5 dt-proceed-button" >
-            <div class="button-text" >
-                Proceed to Order            </div>
-        </div>
+                <div id="info_ph" >
+                    <div id="info_design_title" ></div>
+                    <div id="info_product_title" >5.5" x 2" Event Tickets</div>
+                 </div>
         
-    </div>
-    <div class="clearer" ></div>
-</div>
+            </div>      
+        
+           <div id="page_navigation"  >
+                <div class="page-navigation-item dt-base-gradient with-active on" id="page_navigation_0">Front Side</div>
+                <div class="page-navigation-item dt-base-gradient with-active" id="page_navigation_1">Back Side</div>
+           </div>
 
-  <div id="top_toolbar_placeholder_wrapper" class="ztoolbar"  >    
+           <div id="side_navigation"  ></div> 
+        
+            <div class="top-nav-right"  >
+                <div id="btn_preview" class="toolbar-button type8" >
+                    <div class="button-icon" style="background-position: -72px -16px" ></div>
+                    <div class="button-text" >Preview</div>
+                </div>
+               <div id="btn_saves" class="toolbar-button type8 has-menu menu-opener">
+                    <div class="button-icon" style="background-position: 0px -16px"></div>
+                    <div class="button-text">Save</div>
+                    <div class="button-icon button-arrow"></div>
+
+                    <div class="button-menu with-divider thick">
+                        <div id="btn_save_2" class="toolbar-button type4">
+                            <div class="button-menu-icon" style="background-position: -592px 0px"></div>
+                            <div class="button-menu-text">Save</div>
+                        </div>
+                        <div id="btn_save_as" class="toolbar-button type4">
+                            <div class="button-menu-icon" style="background-position: -608px 0px"></div>
+                            <div class="button-menu-text">Save As...</div>
+                        </div> 
+                
+                
+                    </div>
+
+                </div>
+                
+                <div id="btn_proceed" class="toolbar-button type5 dt-proceed-button" >
+                    <div class="button-text" >
+                        Proceed to Order            </div>
+                </div>
+        
+            </div>
+            <div class="clearer" ></div>
+        </div>
+
+          <div id="top_toolbar_placeholder_wrapper" class="ztoolbar"  >    
     
-    <div id="top_toolbar_placeholder" class="ztoolbar"  style="overflow: visible; z-index: 500;">
-        <div id="btn_top_toolbar_toggle" class="toolbar-button open" ></div>
-        <div id="top_toolbar" class="toolbar ztoolbar"  style="z-index: 500;">
-            <div id="top_toolbar_mask" ></div>
-            <div class="toolbar-section" id="insert_tools_section" >
-                <div class="toolbar-section-title" >Insert</div>
-                <div class="toolbar-section-body" >
-                    <div class="insert-panel-v2" >
-                        <div class="toolbar-button-group" style="width:155px" >
-                            <div id="btn_insert_upload" class="toolbar-button-v2 toolbar-button type1 dt-base-gradient upload-button" >
-                                <div class="button-icon insertAndUploadBtn" style="background-position: 5px 5px" ></div>
-                            </div>
-                            <div id="btn_insert_fotolia" style="" class="toolbar-button-v2 toolbar-button type1 dt-base-gradient upload-button" >
-                                <div class="button-icon" style="background-position: 5px -31px" ></div>
-                            </div>                        
-                        </div>
-                        <div class="toolbar-button-group" >
-                            <div id="btn_insert_shape" class="shape-btn toolbar-button-v2 toolbar-button type1 dt-base-gradient has-menu menu-opener" >
-                                <div class="button-icon" style="background-position: -96px -40px" ></div>
-                                <div class="button-menu with-divider" >
-                                    <div id="btn_shape_rect" class="toolbar-button type4" >
-                                        <div class="button-menu-icon" style="background-position: -832px 0px" ></div>
-                                        <div class="button-menu-text" >Rectangle</div>
+            <div id="top_toolbar_placeholder" class="ztoolbar"  style="overflow: visible; z-index: 500;">
+                <div id="btn_top_toolbar_toggle" class="toolbar-button open" ></div>
+                <div id="top_toolbar" class="toolbar ztoolbar"  style="z-index: 500;">
+                    <div id="top_toolbar_mask" ></div>
+                    <div class="toolbar-section" id="insert_tools_section" >
+                        <div class="toolbar-section-title" >Insert</div>
+                        <div class="toolbar-section-body" >
+                            <div class="insert-panel-v2" >
+                                <div class="toolbar-button-group" style="width:155px" >
+                                    <div id="btn_insert_upload" class="toolbar-button-v2 toolbar-button type1 dt-base-gradient upload-button" >
+                                        <div class="button-icon insertAndUploadBtn" style="background-position: 5px 5px" ></div>
                                     </div>
-                                    <div id="btn_shape_circle" class="toolbar-button type4" >
-                                        <div class="button-menu-icon" style="background-position: -848px 0px" ></div>
-                                        <div class="button-menu-text" >Circle</div>
-                                    </div>
-                                    <div id="btn_shape_hline" class="toolbar-button type4" >
-                                        <div class="button-menu-icon" style="background-position: -816px 0px" ></div>
-                                        <div class="button-menu-text" >Horizontal Line</div>
-                                    </div>
-                                    <div id="btn_shape_vline" class="toolbar-button type4" >
-                                        <div class="button-menu-icon" style="background-position: -800px 0px" ></div>
-                                        <div class="button-menu-text" >Vertical Line</div>
-                                    </div>
+                                    <div id="btn_insert_fotolia" style="" class="toolbar-button-v2 toolbar-button type1 dt-base-gradient upload-button" >
+                                        <div class="button-icon" style="background-position: 5px -31px" ></div>
+                                    </div>                        
                                 </div>
-                            </div>
-                            <div id="insert_user_text" "="" class="btn-insert-text toolbar-button-v2 toolbar-button type1 dt-base-gradient" data-body="New Text Box..." data-title="Enter text here" >
-                                <div class="button-icon" style="background-position: -48px -40px" ></div>
+                                <div class="toolbar-button-group" >
+                                    <div id="btn_insert_shape" class="shape-btn toolbar-button-v2 toolbar-button type1 dt-base-gradient has-menu menu-opener" >
+                                        <div class="button-icon" style="background-position: -96px -40px" ></div>
+                                        <div class="button-menu with-divider" >
+                                            <div id="btn_shape_rect" class="toolbar-button type4" >
+                                                <div class="button-menu-icon" style="background-position: -832px 0px" ></div>
+                                                <div class="button-menu-text" >Rectangle</div>
+                                            </div>
+                                            <div id="btn_shape_circle" class="toolbar-button type4" >
+                                                <div class="button-menu-icon" style="background-position: -848px 0px" ></div>
+                                                <div class="button-menu-text" >Circle</div>
+                                            </div>
+                                            <div id="btn_shape_hline" class="toolbar-button type4" >
+                                                <div class="button-menu-icon" style="background-position: -816px 0px" ></div>
+                                                <div class="button-menu-text" >Horizontal Line</div>
+                                            </div>
+                                            <div id="btn_shape_vline" class="toolbar-button type4" >
+                                                <div class="button-menu-icon" style="background-position: -800px 0px" ></div>
+                                                <div class="button-menu-text" >Vertical Line</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="insert_user_text" "="" class="btn-insert-text toolbar-button-v2 toolbar-button type1 dt-base-gradient" data-body="New Text Box..." data-title="Enter text here" >
+                                        <div class="button-icon" style="background-position: -48px -40px" ></div>
                                                       
+                                    </div>
+                                </div>
                             </div>
+
+
+
+                            <div class="insert-panel-v1" style="display: none;" >
+                               <div id="btn_insert_text" class="toolbar-button type1 dt-base-gradient has-menu menu-opener" >
+                                    <div class="button-icon" style="background-position: -48px -40px" ></div>
+                                    <div class="button-text" >Text</div>
+                                    <div class="button-menu with-divider insert-text-menu" >
+                                        <div class="menu-label" >Select a text type:</div><br >
+                                                                        <div class="toolbar-button type2 btn-insert-text" id="insert_company_name" data-body="Company Name" data-title="Company Name" >
+                                            <div class="insert-text-item-icon" ></div>
+                                            <div class="insert-text-item-title" >Company Name</div>
+                                        </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_slogan" data-body="Slogan/Message" data-title="Slogan/Message" >
+                                            <div class="insert-text-item-icon" ></div>
+                                            <div class="insert-text-item-title" >Slogan</div>
+                                        </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_your_name" data-body="Full Name" data-title="Full Name" >
+                                            <div class="insert-text-item-icon" ></div>
+                                            <div class="insert-text-item-title" >Full Name</div>
+                                        </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_job_title" data-body="Job Title" data-title="Job Title" >
+                                            <div class="insert-text-item-icon" ></div>
+                                            <div class="insert-text-item-title" >Job Title</div>
+                                        </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_phone" data-body="P: 800.555.1234" data-title="Phone No." >
+                                            <div class="insert-text-item-icon" ></div>
+                                            <div class="insert-text-item-title" >Phone</div>
+                                        </div><br >                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_fax" data-body="F: 800.555.2345" data-title="Fax No." >
+                                            <div class="insert-text-item-icon" ></div>
+                                            <div class="insert-text-item-title" >Fax</div>
+                                        </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_email_address" data-body="name@email.com" data-title="Email Address" >
+                                            <div class="insert-text-item-icon" ></div>
+                                            <div class="insert-text-item-title" >Email</div>
+                                        </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_address_line_1" data-body="12345 Main Street" data-title="Address Line 1" >
+                                            <div class="insert-text-item-icon" ></div>
+                                            <div class="insert-text-item-title" >Address</div>
+                                        </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_address_line_2" data-body="City Name, State 98765" data-title="Address Line 2" >
+                                            <div class="insert-text-item-icon" ></div>
+                                            <div class="insert-text-item-title" >Address</div>
+                                        </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_web_address" data-body="www.companyname.com" data-title="Web Address" >
+                                            <div class="insert-text-item-icon" ></div>
+                                            <div class="insert-text-item-title" >Website</div>
+                                        </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_user_text" data-body="New Text Box..." data-title="Enter text here" >
+                                            <div class="insert-text-item-icon" ></div>
+                                            <div class="insert-text-item-title" >General Text</div>
+                                        </div>                            
+                                    </div>                        
+                                </div>
+                                <div id="btn_insert_upload" class="toolbar-button type1 dt-base-gradient" >
+                                    <div class="button-icon" style="background-position: 0 -40px" ></div>
+                                    <div class="button-text" >Image</div>
+                                </div>
+                                <div id="btn_insert_shape" class="shape-btn toolbar-button type1 dt-base-gradient has-menu menu-opener" >
+                                    <div class="button-icon" style="background-position: -96px -40px" ></div>
+                                    <div class="button-text" >Shape</div>
+                                    <div class="button-menu with-divider" >
+                                        <div id="btn_shape_rect" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -832px 0px" ></div>
+                                            <div class="button-menu-text" >Rectangle</div>
+                                        </div>
+                                        <div id="btn_shape_circle" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -848px 0px" ></div>
+                                            <div class="button-menu-text" >Circle</div>
+                                        </div>
+                                        <div id="btn_shape_hline" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -816px 0px" ></div>
+                                            <div class="button-menu-text" >Horizontal Line</div>
+                                        </div>
+                                        <div id="btn_shape_vline" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -800px 0px" ></div>
+                                            <div class="button-menu-text" >Vertical Line</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
                         </div>
                     </div>
 
 
-
-                    <div class="insert-panel-v1" style="display: none;" >
-                       <div id="btn_insert_text" class="toolbar-button type1 dt-base-gradient has-menu menu-opener" >
-                            <div class="button-icon" style="background-position: -48px -40px" ></div>
-                            <div class="button-text" >Text</div>
-                            <div class="button-menu with-divider insert-text-menu" >
-                                <div class="menu-label" >Select a text type:</div><br >
-                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_company_name" data-body="Company Name" data-title="Company Name" >
-                                    <div class="insert-text-item-icon" ></div>
-                                    <div class="insert-text-item-title" >Company Name</div>
-                                </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_slogan" data-body="Slogan/Message" data-title="Slogan/Message" >
-                                    <div class="insert-text-item-icon" ></div>
-                                    <div class="insert-text-item-title" >Slogan</div>
-                                </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_your_name" data-body="Full Name" data-title="Full Name" >
-                                    <div class="insert-text-item-icon" ></div>
-                                    <div class="insert-text-item-title" >Full Name</div>
-                                </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_job_title" data-body="Job Title" data-title="Job Title" >
-                                    <div class="insert-text-item-icon" ></div>
-                                    <div class="insert-text-item-title" >Job Title</div>
-                                </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_phone" data-body="P: 800.555.1234" data-title="Phone No." >
-                                    <div class="insert-text-item-icon" ></div>
-                                    <div class="insert-text-item-title" >Phone</div>
-                                </div><br >                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_fax" data-body="F: 800.555.2345" data-title="Fax No." >
-                                    <div class="insert-text-item-icon" ></div>
-                                    <div class="insert-text-item-title" >Fax</div>
-                                </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_email_address" data-body="name@email.com" data-title="Email Address" >
-                                    <div class="insert-text-item-icon" ></div>
-                                    <div class="insert-text-item-title" >Email</div>
-                                </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_address_line_1" data-body="12345 Main Street" data-title="Address Line 1" >
-                                    <div class="insert-text-item-icon" ></div>
-                                    <div class="insert-text-item-title" >Address</div>
-                                </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_address_line_2" data-body="City Name, State 98765" data-title="Address Line 2" >
-                                    <div class="insert-text-item-icon" ></div>
-                                    <div class="insert-text-item-title" >Address</div>
-                                </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_web_address" data-body="www.companyname.com" data-title="Web Address" >
-                                    <div class="insert-text-item-icon" ></div>
-                                    <div class="insert-text-item-title" >Website</div>
-                                </div>                                                                <div class="toolbar-button type2 btn-insert-text" id="insert_user_text" data-body="New Text Box..." data-title="Enter text here" >
-                                    <div class="insert-text-item-icon" ></div>
-                                    <div class="insert-text-item-title" >General Text</div>
-                                </div>                            
-                            </div>                        
-                        </div>
-                        <div id="btn_insert_upload" class="toolbar-button type1 dt-base-gradient" >
-                            <div class="button-icon" style="background-position: 0 -40px" ></div>
-                            <div class="button-text" >Image</div>
-                        </div>
-                        <div id="btn_insert_shape" class="shape-btn toolbar-button type1 dt-base-gradient has-menu menu-opener" >
-                            <div class="button-icon" style="background-position: -96px -40px" ></div>
-                            <div class="button-text" >Shape</div>
-                            <div class="button-menu with-divider" >
-                                <div id="btn_shape_rect" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -832px 0px" ></div>
-                                    <div class="button-menu-text" >Rectangle</div>
+                    <div class="toolbar-section-divider" ></div>
+                    <div class="toolbar-section" id="text_tools_section" >
+                        <div class="toolbar-section-title" >Text</div>
+                        <div class="toolbar-section-body" >
+                            <div class="toolbar-section-row" >
+                                <div id="btn_text_font_face" class="toolbar-button type3" >
+                                    <div class="button-text" >Font</div>
+                                    <div class="bordered" >
+                                        <div id="selected_font_face" class="button-selected-text" style="width:80px; margin:2px 0 0 2px;" ></div>
+                                        <div class="button-arrow" ></div>
+                                    </div>
                                 </div>
-                                <div id="btn_shape_circle" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -848px 0px" ></div>
-                                    <div class="button-menu-text" >Circle</div>
-                                </div>
-                                <div id="btn_shape_hline" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -816px 0px" ></div>
-                                    <div class="button-menu-text" >Horizontal Line</div>
-                                </div>
-                                <div id="btn_shape_vline" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -800px 0px" ></div>
-                                    <div class="button-menu-text" >Vertical Line</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-                </div>
-            </div>
-
-
-            <div class="toolbar-section-divider" ></div>
-            <div class="toolbar-section" id="text_tools_section" >
-                <div class="toolbar-section-title" >Text</div>
-                <div class="toolbar-section-body" >
-                    <div class="toolbar-section-row" >
-                        <div id="btn_text_font_face" class="toolbar-button type3" >
-                            <div class="button-text" >Font</div>
-                            <div class="bordered" >
-                                <div id="selected_font_face" class="button-selected-text" style="width:80px; margin:2px 0 0 2px;" ></div>
-                                <div class="button-arrow" ></div>
-                            </div>
-                        </div>
-                        <div id="btn_text_font_size" class="toolbar-button type3 has-menu menu-opener" >
-                            <div class="button-text" >Size</div>
-                            <div class="bordered" >
-                                <input oninput="fontsizeChanged(this)"  id="selected_font_size" class="button-textbox"  type="text" style="font-size: 10px">
-                                <div class="button-arrow" id="fontArrow" onclick="fontsizebuttonClicked()"></div>
-                            </div>
-                            <div id="font_size_menu" class="button-menu" >
-                                @foreach(var fontsize in Model.fontSizeArray){
-                                    <div class="toolbar-button type4 font-size-option" onclick="fontSizeClicked(@fontsize)"><div class="button-menu-text">@fontsize pt</div></div>
-                                }
+                                <div id="btn_text_font_size" class="toolbar-button type3 has-menu menu-opener" >
+                                    <div class="button-text" >Size</div>
+                                    <div class="bordered" >
+                                        <input oninput="fontsizeChanged(this)"  id="selected_font_size" class="button-textbox"  type="text" style="font-size: 10px">
+                                        <div class="button-arrow" id="fontArrow" onclick="fontsizebuttonClicked()"></div>
+                                    </div>
+                                    <div id="font_size_menu" class="button-menu" >
+                                        @foreach(var fontsize in Model.fontSizeArray){
+                                            <div class="toolbar-button type4 font-size-option" onclick="fontSizeClicked(@fontsize)"><div class="button-menu-text">@fontsize pt</div></div>
+                                        }
      
-                            </div>
-                        </div>
-                        <div id="btn_text_font_color" class="toolbar-button type3" >
-                            <div class="button-text" >Color</div>
-                            <div class="bordered" >
-                                <div id="selected_font_color" class="selected-color" data-jscolor="{}"></div>
-                                <div class="button-arrow" ></div>
-                            </div>
-                        </div>
+                                    </div>
+                                </div>
+                                <div id="btn_text_font_color" class="toolbar-button type3" >
+                                    <div class="button-text" >Color</div>
+                                    <div class="bordered" >
+                                        <div id="selected_font_color" class="selected-color" data-jscolor="{}"></div>
+                                        <div class="button-arrow" ></div>
+                                    </div>
+                                </div>
 
-                        <div class="toolbar-button type3 opacity-feature" >
-                            <div class="button-text" >Opacity</div>
-                            <div class="bordered" >
-                                <div id="selected_text_opacity" value = '100'>100</div>
-                                <div class="button-arrow" ></div>
-                            </div>
-                            <div id="text_opacity" class="opacity-slider button-menu" >
-                                <div class="opacity-range-bar" >
-                                    <div class="opacity-slider-handle" id="opacity-slider-handle"  style="top: 0px;"></div>
+                                <div class="toolbar-button type3 opacity-feature" >
+                                    <div class="button-text" >Opacity</div>
+                                    <div class="bordered" >
+                                        <div id="selected_text_opacity" value = '100'>100</div>
+                                        <div class="button-arrow" ></div>
+                                    </div>
+                                    <div id="text_opacity" class="opacity-slider button-menu" >
+                                        <div class="opacity-range-bar" >
+                                            <div class="opacity-slider-handle" id="opacity-slider-handle"  style="top: 0px;"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="toolbar-section-row" >
+                                <div id="btn_text_bold" class="toolbar-button type2" >
+                                    <div class="button-icon" style="background-position: -32px 0px" ></div>
+                                </div>
+                        
+                                <div id="btn_text_italic" class="toolbar-button type2" >
+                                    <div class="button-icon" style="background-position: -48px 0px" ></div>
+                                </div>
+                        
+                                <div id="btn_text_gravity_west" class="toolbar-button type2 grouped" >
+                                    <div class="button-icon" style="background-position: -64px 0px" ></div>
+                                </div>
+                        
+                                <div id="btn_text_gravity_center" class="toolbar-button type2 grouped" >
+                                    <div class="button-icon" style="background-position: -80px 0px" ></div>
+                                </div>
+
+                                <div id="btn_text_gravity_east" class="toolbar-button type2 grouped" >
+                                    <div class="button-icon" style="background-position: -96px 0px" ></div>
+                                </div>
+
+                                <div id="btn_text_bullet" class="toolbar-button type2 has-menu menu-opener" >
+                                    <div class="button-icon" style="background-position: -96px -16px" ></div>
+                                    <div class="button-menu" >
+                                        <div id="btn_text_bullet_none" class="toolbar-button type2" >
+                                            <div class="bullet-text-item" style="background-position: 0 0" ></div>
+                                        </div>
+
+                                        <div id="btn_text_bullet_black_circle" class="toolbar-button type2" >
+                                            <div class="bullet-text-item" style="background-position: 0 -60px" ></div>
+                                        </div>
+                                        <div id="btn_text_bullet_white_circle" class="toolbar-button type2" >
+                                            <div class="bullet-text-item" style="background-position: -60px -60px" ></div>
+                                        </div>
+                                        <br >
+                                        <div id="btn_text_bullet_black_square" class="toolbar-button type2" >
+                                            <div class="bullet-text-item" style="background-position: -120px -60px" ></div>
+                                        </div>
+                                        <div id="btn_text_bullet_white_square" class="toolbar-button type2" >
+                                            <div class="bullet-text-item" style="background-position: -180px -60px" ></div>
+                                        </div>
+                                        <div id="btn_text_bullet_dash" class="toolbar-button type2" >
+                                            <div class="bullet-text-item" style="background-position: -240px -60px" ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                                <div id="btn_text_number" class="toolbar-button type2 has-menu menu-opener" >
+                                    <div class="button-icon" style="background-position: -112px -16px" ></div>
+                                    <div class="button-menu" >
+                                        <div id="btn_text_number_none" class="toolbar-button type2" >
+                                            <div class="bullet-text-item" style="background-position: 0 0" ></div>
+                                        </div>
+                                        <div id="btn_text_bullet_number_dot" class="toolbar-button type2" >
+                                            <div class="bullet-text-item" style="background-position: -60px 0" ></div>
+                                        </div>
+                                        <br >
+                                        <div id="btn_text_bullet_number_dash" class="toolbar-button type2" >
+                                            <div class="bullet-text-item" style="background-position: -120px 0" ></div>
+                                        </div>
+                                        <div id="btn_text_bullet_number_parenth" class="toolbar-button type2" >
+                                            <div class="bullet-text-item" style="background-position: -180px 0" ></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="btn_text_fit_horizontally" class="toolbar-button type2" >
+                                    <div class="button-text" style="font-size: 14px; color: #000; margin-top:0px;" >fit</div>
+                                </div>
+                        
+                                <div id="btn_text_auto_fit" class="toolbar-button type2 admin-only"  style="display: none;">
+                                    <div class="button-text" >Auto<br >Fit</div>
+                                </div>
+
+                        
+
+                            </div>
+
                         </div>
                     </div>
-                    <div class="toolbar-section-row" >
-                        <div id="btn_text_bold" class="toolbar-button type2" >
-                            <div class="button-icon" style="background-position: -32px 0px" ></div>
-                        </div>
-                        
-                        <div id="btn_text_italic" class="toolbar-button type2" >
-                            <div class="button-icon" style="background-position: -48px 0px" ></div>
-                        </div>
-                        
-                        <div id="btn_text_gravity_west" class="toolbar-button type2 grouped" >
-                            <div class="button-icon" style="background-position: -64px 0px" ></div>
-                        </div>
-                        
-                        <div id="btn_text_gravity_center" class="toolbar-button type2 grouped" >
-                            <div class="button-icon" style="background-position: -80px 0px" ></div>
-                        </div>
 
-                        <div id="btn_text_gravity_east" class="toolbar-button type2 grouped" >
-                            <div class="button-icon" style="background-position: -96px 0px" ></div>
-                        </div>
-
-                        <div id="btn_text_bullet" class="toolbar-button type2 has-menu menu-opener" >
-                            <div class="button-icon" style="background-position: -96px -16px" ></div>
-                            <div class="button-menu" >
-                                <div id="btn_text_bullet_none" class="toolbar-button type2" >
-                                    <div class="bullet-text-item" style="background-position: 0 0" ></div>
-                                </div>
-
-                                <div id="btn_text_bullet_black_circle" class="toolbar-button type2" >
-                                    <div class="bullet-text-item" style="background-position: 0 -60px" ></div>
-                                </div>
-                                <div id="btn_text_bullet_white_circle" class="toolbar-button type2" >
-                                    <div class="bullet-text-item" style="background-position: -60px -60px" ></div>
-                                </div>
-                                <br >
-                                <div id="btn_text_bullet_black_square" class="toolbar-button type2" >
-                                    <div class="bullet-text-item" style="background-position: -120px -60px" ></div>
-                                </div>
-                                <div id="btn_text_bullet_white_square" class="toolbar-button type2" >
-                                    <div class="bullet-text-item" style="background-position: -180px -60px" ></div>
-                                </div>
-                                <div id="btn_text_bullet_dash" class="toolbar-button type2" >
-                                    <div class="bullet-text-item" style="background-position: -240px -60px" ></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div id="btn_text_number" class="toolbar-button type2 has-menu menu-opener" >
-                            <div class="button-icon" style="background-position: -112px -16px" ></div>
-                            <div class="button-menu" >
-                                <div id="btn_text_number_none" class="toolbar-button type2" >
-                                    <div class="bullet-text-item" style="background-position: 0 0" ></div>
-                                </div>
-                                <div id="btn_text_bullet_number_dot" class="toolbar-button type2" >
-                                    <div class="bullet-text-item" style="background-position: -60px 0" ></div>
-                                </div>
-                                <br >
-                                <div id="btn_text_bullet_number_dash" class="toolbar-button type2" >
-                                    <div class="bullet-text-item" style="background-position: -120px 0" ></div>
-                                </div>
-                                <div id="btn_text_bullet_number_parenth" class="toolbar-button type2" >
-                                    <div class="bullet-text-item" style="background-position: -180px 0" ></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="btn_text_fit_horizontally" class="toolbar-button type2" >
-                            <div class="button-text" style="font-size: 14px; color: #000; margin-top:0px;" >fit</div>
-                        </div>
-                        
-                        <div id="btn_text_auto_fit" class="toolbar-button type2 admin-only"  style="display: none;">
-                            <div class="button-text" >Auto<br >Fit</div>
-                        </div>
-
-                        
-
+                    <div class="toolbar-section-divider" ></div>
+                    <div class="toolbar-section" id="product_color_section" style="width: 80px; display: none;" >
+                        <div class="toolbar-section-title" >Product Color</div>
+                        <div class="toolbar-section-body" ></div>
                     </div>
-
-                </div>
-            </div>
-
-            <div class="toolbar-section-divider" ></div>
-            <div class="toolbar-section" id="product_color_section" style="width: 80px; display: none;" >
-                <div class="toolbar-section-title" >Product Color</div>
-                <div class="toolbar-section-body" ></div>
-            </div>
-            <div class="toolbar-section" id="bg_tools_section" style="width: 80px" >
-                <div class="toolbar-section-title" >Background</div>
-                <div class="toolbar-section-body" >
+                    <div class="toolbar-section" id="bg_tools_section" style="width: 80px" >
+                        <div class="toolbar-section-title" >Background</div>
+                        <div class="toolbar-section-body" >
                 
-                    <div id="btn_bg_color" class="toolbar-button type3 has-menu menu-opener" >
-                        <div class="button-text" >Color</div>
-                        <div class="bordered" >
+                            <div id="btn_bg_color" class="toolbar-button type3 has-menu menu-opener" >
+                                <div class="button-text" >Color</div>
+                                <div class="bordered" >
                             	
-                            <div id="selected_bg_color" data-jscolor="{}" class="selected-color"  style="background-color: rgb(255, 255, 255);"></div>
-                            <div class="button-arrow" ></div>
-                        </div>
-                     </div>
-
-                </div>
-            </div>
-
-            <div class="toolbar-section-divider" ></div>
-            <div class="toolbar-section" id="edit_tools_section" >
-                <div class="toolbar-section-title" >Edit</div>
-                <div class="toolbar-section-body" >
-                        <div id="btn_edit_undo" class="toolbar-button type2" >
-                            <div class="button-icon" style="background-position: 0px 0px" ></div>
-                            <div class="button-text" >Undo</div>
-                        </div>
-                        <div id="btn_edit_redo" class="toolbar-button type2" >
-                            <div class="button-icon" style="background-position: -16px 0px" ></div>
-                            <div class="button-text" >Redo</div>
-                        </div>
-                        <div id="btn_edit_lock" class="toolbar-button type2" >
-                            <div class="button-icon" style="background-position: -720px 0px" ></div>
-                            <div class="button-text" >Lock</div>
-                        </div>
-                        <hr >
-                        <div id="btn_edit_copy" class="toolbar-button type2" >
-                            <div class="button-icon" style="background-position: -480px 0px" ></div>
-                            <div class="button-text" >Copy</div>
-                        </div>
-                        <div id="btn_edit_paste" class="toolbar-button type2" >
-                            <div class="button-icon" style="background-position: -496px 0px" ></div>
-                            <div class="button-text" >Paste</div>
-                        </div>
-                        <div id="btn_edit_delete" class="toolbar-button type2" >
-                            <div class="button-icon" style="background-position: -400px 0px" ></div>
-                            <div class="button-text" >Delete</div>
-                        </div>
-                </div>
-            </div>
-            <div class="toolbar-section-divider" ></div>
-            <div class="toolbar-section" id="advanced_tools_section" >
-                <div class="toolbar-section-title" >Advanced</div>
-                <div class="toolbar-section-body" >
-                        <div id="btn_advance_align" class="toolbar-button type2 has-menu menu-opener" >
-                            <div class="button-icon" style="background-position: -144px 0px" ></div>
-                            <div class="button-text" >Align</div>
-                            <div class="button-menu with-divider" >
-                                <div id="btn_align_left" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -144px 0px" ></div>
-                                    <div class="button-menu-text" >Align Left</div>
+                                    <div id="selected_bg_color" data-jscolor="{}" class="selected-color"  style="background-color: rgb(255, 255, 255);"></div>
+                                    <div class="button-arrow" ></div>
                                 </div>
-                                <div id="btn_align_center" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -192px 0px" ></div>
-                                    <div class="button-menu-text" >Align Center</div>
+                             </div>
+
+                        </div>
+                    </div>
+
+                    <div class="toolbar-section-divider" ></div>
+                    <div class="toolbar-section" id="edit_tools_section" >
+                        <div class="toolbar-section-title" >Edit</div>
+                        <div class="toolbar-section-body" >
+                                <div id="btn_edit_undo" class="toolbar-button type2" >
+                                    <div class="button-icon" style="background-position: 0px 0px" ></div>
+                                    <div class="button-text" >Undo</div>
                                 </div>
-                                <div id="btn_align_right" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -176px 0px" ></div>
-                                    <div class="button-menu-text" >Align Right</div>
+                                <div id="btn_edit_redo" class="toolbar-button type2" >
+                                    <div class="button-icon" style="background-position: -16px 0px" ></div>
+                                    <div class="button-text" >Redo</div>
+                                </div>
+                                <div id="btn_edit_lock" class="toolbar-button type2" >
+                                    <div class="button-icon" style="background-position: -720px 0px" ></div>
+                                    <div class="button-text" >Lock</div>
                                 </div>
                                 <hr >
-                                <div id="btn_align_top" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -128px 0px" ></div>
-                                    <div class="button-menu-text" >Align Top</div>
+                                <div id="btn_edit_copy" class="toolbar-button type2" >
+                                    <div class="button-icon" style="background-position: -480px 0px" ></div>
+                                    <div class="button-text" >Copy</div>
                                 </div>
-                                <div id="btn_align_middle" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -208px 0px" ></div>
-                                    <div class="button-menu-text" >Align Middle</div>
+                                <div id="btn_edit_paste" class="toolbar-button type2" >
+                                    <div class="button-icon" style="background-position: -496px 0px" ></div>
+                                    <div class="button-text" >Paste</div>
                                 </div>
-                                <div id="btn_align_bottom" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -160px 0px" ></div>
-                                    <div class="button-menu-text" >Align Bottom</div>
+                                <div id="btn_edit_delete" class="toolbar-button type2" >
+                                    <div class="button-icon" style="background-position: -400px 0px" ></div>
+                                    <div class="button-text" >Delete</div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="toolbar-section-divider" ></div>
+                    <div class="toolbar-section" id="advanced_tools_section" >
+                        <div class="toolbar-section-title" >Advanced</div>
+                        <div class="toolbar-section-body" >
+                                <div id="btn_advance_align" class="toolbar-button type2 has-menu menu-opener" >
+                                    <div class="button-icon" style="background-position: -144px 0px" ></div>
+                                    <div class="button-text" >Align</div>
+                                    <div class="button-menu with-divider" >
+                                        <div id="btn_align_left" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -144px 0px" ></div>
+                                            <div class="button-menu-text" >Align Left</div>
+                                        </div>
+                                        <div id="btn_align_center" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -192px 0px" ></div>
+                                            <div class="button-menu-text" >Align Center</div>
+                                        </div>
+                                        <div id="btn_align_right" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -176px 0px" ></div>
+                                            <div class="button-menu-text" >Align Right</div>
+                                        </div>
+                                        <hr >
+                                        <div id="btn_align_top" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -128px 0px" ></div>
+                                            <div class="button-menu-text" >Align Top</div>
+                                        </div>
+                                        <div id="btn_align_middle" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -208px 0px" ></div>
+                                            <div class="button-menu-text" >Align Middle</div>
+                                        </div>
+                                        <div id="btn_align_bottom" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -160px 0px" ></div>
+                                            <div class="button-menu-text" >Align Bottom</div>
+                                        </div>
+                                        <hr >
+                                        <div id="btn_dist_ver" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -896px 0px" ></div>
+                                            <div class="button-menu-text" >Distribute Vertically</div>
+                                        </div>
+                                        <div id="btn_dist_hor" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -880px 0px" ></div>
+                                            <div class="button-menu-text" >Distribute Horizontally</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="btn_advance_layers" class="toolbar-button type2 has-menu menu-opener" >
+                                    <div class="button-icon" style="background-position: -320px 0px" ></div>
+                                    <div class="button-text" >Layers</div>
+                                    <div class="button-menu with-divider" >
+                                        <div id="btn_arrange_bring_front" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -432px 0px" ></div>
+                                            <div class="button-menu-text" >Bring to Front</div>
+                                        </div>
+                                        <div id="btn_arrange_send_back" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -464px 0px" ></div>
+                                            <div class="button-menu-text" >Send to Back</div>
+                                        </div>
+                                        <div id="btn_arrange_bring_forward" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -416px 0px" ></div>
+                                            <div class="button-menu-text" >Bring Forward</div>
+                                        </div>
+                                        <div id="btn_arrange_send_backward" class="toolbar-button type4" >
+                                            <div class="button-menu-icon" style="background-position: -448px 0px" ></div>
+                                            <div class="button-menu-text" >Send Backward</div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <hr >
-                                <div id="btn_dist_ver" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -896px 0px" ></div>
-                                    <div class="button-menu-text" >Distribute Vertically</div>
+                                <div id="btn_advance_rotate" class="toolbar-button type2" >
+                                    <div class="button-icon" style="background-position: -688px 0px" ></div>
+                                    <div class="button-text" >Rotate</div>
                                 </div>
-                                <div id="btn_dist_hor" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -880px 0px" ></div>
-                                    <div class="button-menu-text" >Distribute Horizontally</div>
+                                <div id="btn_advance_crop" class="toolbar-button type2" >
+                                    <div class="button-icon" style="background-position: -336px 0px" ></div>
+                                    <div class="button-text" >Crop</div>
                                 </div>
-                            </div>
-                        </div>
-                        <div id="btn_advance_layers" class="toolbar-button type2 has-menu menu-opener" >
-                            <div class="button-icon" style="background-position: -320px 0px" ></div>
-                            <div class="button-text" >Layers</div>
-                            <div class="button-menu with-divider" >
-                                <div id="btn_arrange_bring_front" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -432px 0px" ></div>
-                                    <div class="button-menu-text" >Bring to Front</div>
-                                </div>
-                                <div id="btn_arrange_send_back" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -464px 0px" ></div>
-                                    <div class="button-menu-text" >Send to Back</div>
-                                </div>
-                                <div id="btn_arrange_bring_forward" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -416px 0px" ></div>
-                                    <div class="button-menu-text" >Bring Forward</div>
-                                </div>
-                                <div id="btn_arrange_send_backward" class="toolbar-button type4" >
-                                    <div class="button-menu-icon" style="background-position: -448px 0px" ></div>
-                                    <div class="button-menu-text" >Send Backward</div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr >
-                        <div id="btn_advance_rotate" class="toolbar-button type2" >
-                            <div class="button-icon" style="background-position: -688px 0px" ></div>
-                            <div class="button-text" >Rotate</div>
-                        </div>
-                        <div id="btn_advance_crop" class="toolbar-button type2" >
-                            <div class="button-icon" style="background-position: -336px 0px" ></div>
-                            <div class="button-text" >Crop</div>
-                        </div>
                 
-                </div>
-            </div>
-            <div class="toolbar-section-divider" ></div>
-            <div id="view_tools_section" class="toolbar-section" >
-                <div class="toolbar-section-title" >View</div>
-                <div class="toolbar-section-body" >
-                        <hr >
-                        <div id="btn_view_zoom_out" class="toolbar-button type2" style="width:50px" >
-                            <div class="button-icon" style="background-position: -304px 0px" ></div>
-                            <div class="button-text" >Zoom out</div>
                         </div>
-                        <div id="btn_view_zoom_in" class="toolbar-button type2" style="width:45px" >
-                            <div class="button-icon" style="background-position: -288px 0px" ></div>
-                            <div class="button-text" >Zoom in</div>
-                        </div>
-                        <hr >
+                    </div>
+                    <div class="toolbar-section-divider" ></div>
+                    <div id="view_tools_section" class="toolbar-section" >
+                        <div class="toolbar-section-title" >View</div>
+                        <div class="toolbar-section-body" >
+                                <hr >
+                                <div id="btn_view_zoom_out" class="toolbar-button type2" style="width:50px" >
+                                    <div class="button-icon" style="background-position: -304px 0px" ></div>
+                                    <div class="button-text" >Zoom out</div>
+                                </div>
+                                <div id="btn_view_zoom_in" class="toolbar-button type2" style="width:45px" >
+                                    <div class="button-icon" style="background-position: -288px 0px" ></div>
+                                    <div class="button-text" >Zoom in</div>
+                                </div>
+                                <hr >
                 
-                        <div id="btn_view_quick_edit" class="toolbar-button type2" style="display:inline-block; width:45px" >
-                            <div class="button-text" style="line-height:14px" >Quick<br >Input</div>
-                        </div>
+                                <div id="btn_view_quick_edit" class="toolbar-button type2" style="display:inline-block; width:45px" >
+                                    <div class="button-text" style="line-height:14px" >Quick<br >Input</div>
+                                </div>
 
-                        <div id="btn_view_grid" class="toolbar-button type2" style="width:45px" >
-                            <div class="button-icon" style="background-position: -272px 0px" ></div>
-                            <div class="button-text" >Grid</div>
-                        </div>
+                                <div id="btn_view_grid" class="toolbar-button type2" style="width:45px" >
+                                    <div class="button-icon" style="background-position: -272px 0px" ></div>
+                                    <div class="button-text" >Grid</div>
+                                </div>
 
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
         
       
-    </div>
-  </div>
-  <div class="design-progress-bar easy-nav"  ></div>
+            </div>
+          </div>
+          <div class="design-progress-bar easy-nav"  ></div>
   
-    <div id="left_panel"  >
-        <div id="text_fields"  style="display: none;"></div>
-    </div>  
+            <div id="left_panel"  >
+                <div id="text_fields"  style="display: none;"></div>
+            </div>  
 
  
-  <div id="design_tool" style="margin-left: 0px;">
-    <div id="fotolia_notif" style="display: none;">This design contains 1 or more watermarked premium image(s). It will
-        be automatically replaced with non-watermarked, high-resolution version after licensing, before printing.</div>
-    <div id="tool_placeholder" style="width: 955px;">
-        <div id="canvas"
-            style="width: 949px; height: 371px; top: 5px; left: 3px; background-color: rgb(255, 255, 255);">
-            <div id="outline_layers" style="z-index: 50;">
-                <div class="outline2 non-selectable" id="deselector" style="z-index: -1;"></div>
-                <div id="multi_selector" style="display: none; left: 1041px; top: 28px; width: 0px; height: 0px;"></div>
-            </div>
-            <div id="image_layers" style="z-index: 10;"></div>
-            <div id="text_layers" style="z-index: 20;"></div>
-            <div id="overlay_layers" style="z-index: 30;"></div>
+          <div id="design_tool" style="margin-left: 0px;">
+            <div id="fotolia_notif" style="display: none;">This design contains 1 or more watermarked premium image(s). It will
+                be automatically replaced with non-watermarked, high-resolution version after licensing, before printing.</div>
+            <div id="tool_placeholder" style="width: 955px;">                   
+                <div id="canvas" 
+                    style="width: 949px; height: 371px; top: 5px; left: 3px; background-color: rgb(255, 255, 255);">
+                    <div id="outline_layers" style="z-index: 50;">
+                        <div class="outline2 non-selectable" id="deselector" style="z-index: -1;"></div>
+                        <div id="multi_selector" style="display: none; left: 1041px; top: 28px; width: 0px; height: 0px;"></div>
+                    </div>
+                    <div id="image_layers" style="z-index: 10;"></div>
+                    <div id="text_layers" style="z-index: 20;"></div>
+                    <div id="overlay_layers" style="z-index: 30;"></div>
            
-            <div id="mask_layers" style="z-index: 40;">
-              <!-- <div id="snap_guide_x" class="snap-guide" style="display: none;"></div>
-                <div id="snap_guide_y" class="snap-guide" style="display: none;"></div>
-                <div class="grid-area-mask grid-mask"
-                    style="background: url(&quot;/ajax/bitmap/getGridLines.php?width=5.75&amp;height=2.25&amp;dpi=165&amp;page=0&amp;type=minor&amp;bleed=0.125&quot;); opacity: 0.4; display: none;">
+                    <div id="mask_layers" data-html2canvas-ignore style="z-index: 40;">
+                      
+                        <div class="bleed-area-mask issueShadow1"
+                            style="width: 100%; height: 100%; border: 1px solid gray; z-index: 101; display: none;"></div>
+                        <div class="bleed-area-mask issueShadow2"
+                            style="width: 908px; height: 330px; margin: 21px; border: 1px dashed red; z-index: 101; display: none;">
+                        </div><img class="bleed-area-mask issueShadow3" src="/images/easy/scissors.png"
+                            style="position: absolute; z-index: 110; top: 6px; left: 20%; display: none;">
+                        <div class="no-bleed-area-mask canvas-shadow issueShadow4"
+                            style="width: 908px; height: 330px; border: 1px solid gray; margin: 21px; z-index: 101;"></div>
+                        <div class="no-bleed-area-mask issueShadow5"
+                            style="width: 100%; height: 100%; border-color: rgb(238, 238, 238); border-style: solid; border-width: 21px; z-index: 100;">
+                        </div>
+                        <div class="safe-zone-mask dashed"
+                            style="width: 866px; height: 289px; left: 41px; top: 41px; display: none;"></div>
+                        <div class="safe-zone-mask solid"
+                            style="width: 866px; height: 289px; left: 41px; top: 41px; display: none;"></div>
+                    </div>
+                  <!--  <div id="droppable_layers" style="z-index: 60; display: none;"></div> -->
+                    <div id="loading" style="z-index: 80; background-color: rgb(238, 238, 238); display: none;"></div>
                 </div>
-                <div class="grid-area-mask grid-mask"
-                    style="background: url(&quot;/ajax/bitmap/getGridLines.php?width=5.75&amp;height=2.25&amp;dpi=165&amp;page=0&amp;type=major&amp;bleed=0.125&quot;); display: none;">
+
+
+                <div id="canvas_color_picker">
+                    <div id="eyedropper_preview" style="position: fixed; display: none;"></div>
                 </div>
-                <div class="bleed-area-mask opacity50"
-                    style="width: 100%; height: 100%; border-width: 21px; border-color: rgb(255, 255, 255); border-style: solid; z-index: 100; display: none;">
-                </div>-->
-                <div class="bleed-area-mask issueShadow1"
-                    style="width: 100%; height: 100%; border: 1px solid gray; z-index: 101; display: none;"></div>
-                <div class="bleed-area-mask issueShadow2"
-                    style="width: 908px; height: 330px; margin: 21px; border: 1px dashed red; z-index: 101; display: none;">
-                </div><img class="bleed-area-mask issueShadow3" src="/images/easy/scissors.png"
-                    style="position: absolute; z-index: 110; top: 6px; left: 20%; display: none;">
-                <div class="no-bleed-area-mask canvas-shadow issueShadow4"
-                    style="width: 908px; height: 330px; border: 1px solid gray; margin: 21px; z-index: 101;"></div>
-                <div class="no-bleed-area-mask issueShadow5"
-                    style="width: 100%; height: 100%; border-color: rgb(238, 238, 238); border-style: solid; border-width: 21px; z-index: 100;">
-                </div>
-                <div class="safe-zone-mask dashed"
-                    style="width: 866px; height: 289px; left: 41px; top: 41px; display: none;"></div>
-                <div class="safe-zone-mask solid"
-                    style="width: 866px; height: 289px; left: 41px; top: 41px; display: none;"></div>
             </div>
-          <!--  <div id="droppable_layers" style="z-index: 60; display: none;"></div> -->
-            <div id="loading" style="z-index: 80; background-color: rgb(238, 238, 238); display: none;"></div>
         </div>
-        <div id="canvas_color_picker">
-            <div id="eyedropper_preview" style="position: fixed; display: none;"></div>
-        </div>
-    </div>
-</div>
 
-  <!-- Start: Bottom toolbar placeholder -->
-  <div id="bottom_toolbar_placeholder" >
-  </div>
-  <!-- End Bottom toolbar placeholder -->
+          <!-- Start: Bottom toolbar placeholder -->
+          <div id="bottom_toolbar_placeholder" >
+          </div>
+          <!-- End Bottom toolbar placeholder -->
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" data-backdrop="static" data-keyboard="false" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" style="width: 55em;max-width: 55em;min-width: 55em" role="document">
-    <div class="modal-content container">
-        <div class="row pl-3">
-            <div class="insertImageText mt-3 ml-3 pb-2">Insert Image</div>
-            <div class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></div>
-        </div>
-       <div class="tabContainer mb-2 ml-3 mr-3">
-           <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#uploadPanel" role="tab" aria-controls="home" aria-selected="true">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-              </li>
-            </ul>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" data-backdrop="static" data-keyboard="false" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" style="width: 55em;max-width: 55em;min-width: 55em" role="document">
+            <div class="modal-content container">
+                <div class="row pl-3">
+                    <div class="insertImageText mt-3 ml-3 pb-2">Insert Image</div>
+                    <div class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></div>
+                </div>
+               <div class="tabContainer mb-2 ml-3 mr-3">
+                   <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#uploadPanel" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+                      </li>
+                    </ul>
 
-            <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" id="uploadPanel" role="tabpanel" aria-labelledby="home-tab">
-                      <div class="uploadFilePart">
-                          <form  method="post" class="dropzone" asp-page-handler="Upload"  id="uploader" enctype="multipart/form-data" data-pasley-validate>                          
-                          </form>
-                      </div>
+                    <div class="tab-content" id="myTabContent">
+                      <div class="tab-pane fade show active" id="uploadPanel" role="tabpanel" aria-labelledby="home-tab">
+                              <div class="uploadFilePart">
+                                  <form  method="post" class="dropzone" asp-page-handler="Upload"  id="uploader" enctype="multipart/form-data" data-pasley-validate>                          
+                                  </form>
+                              </div>
 
-                      <div class="imagesViewPart">
-                          <div class="row loadedimages">
+                              <div class="imagesViewPart">
+                                  <div class="row loadedimages">
                                    
-                          </div>
+                                  </div>
+                              </div>
                       </div>
-              </div>
-              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-            </div>
-       </div>
-       <div class="row">
-           <div class="insertItemRight mr-0">
-               <div class="toolbar-button type5 dt-proceed-button">
-                    <div class="button-text InsertBtnOnModal" >Insert Image</div>
+                      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                    </div>
                </div>
-           </div>
-       </div>
-       <img onclick=""/>
-    </div>
-  </div>
+               <div class="row">
+                   <div class="insertItemRight mr-0">
+                       <div class="toolbar-button type5 dt-proceed-button">
+                            <div class="button-text InsertBtnOnModal" >Insert Image</div>
+                       </div>
+                   </div>
+               </div>
+               <img onclick=""/>
+            </div>
+          </div>
+        </div>
+        </div>
+    </main>
 </div>
 
 
+ <div class="site-main-container" id="firstPopup">
+     <div class="first-popup popupContainer">   
+          <div class="simple-popup-content" style="left: 643px; top: 20px;">
+            <div id="orientation_wrapper">
+                <div class="row orientation-tab-content">
+                    <div class="col-md-6 ori-box"><img src="/images/orientation-horizontal.svg"
+                            id="orientation_image"></div>
+                    <div class="col-md-6 ori-box">
+                        <h4>Choose your<br> design orientation:</h4>
+                            <label  class="modeV"><input type="radio" name="orientation"
+                                    id="vertical_orientation" class="prod-orientation" value="vertical">
+                                <span>Vertical</span></label>
+
+                          <label  class="modeH"><input type="radio" name="orientation"
+                                id="horizontal_orientation" class="prod-orientation" value="horizontal" checked="checked">
+                            <span>Horizontal</span></label>
+                        <div class="action-button" id="ori_action"><span>Continue</span> <i class="fa fa-angle-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+ </div>
 
 
 @(await Html.RenderComponentAsync<ComponentToolbars>(RenderMode.ServerPrerendered))
@@ -596,9 +615,9 @@
     <script src="~/js/html2canvas.js"></script>
     <script>
         (function(){
-           window.textFontSize = 12; 
+            window.textFontSize = 12; 
             $("#selected_font_size").val('12');
-           var ImageInfoList = [];
+            var ImageInfoList = [];
             window.ImageInfoList = ImageInfoList;
             window.unloggedUserSession= '@HttpContext.Session.GetString("forUserInfo")';
             @foreach( var Item in Model.ImagesInfoList)
@@ -619,11 +638,13 @@
             window.refreshImageList();
         })();
     </script>
+        
     <script src="~/js/CanvasElements.js"></script>
     <script src="~/js/site.js"></script>
     
     <script src="~/dropzone.js"></script>
-    
+    <script src="~/js/ModeSelect.js"></script>
 }
+    
 
     

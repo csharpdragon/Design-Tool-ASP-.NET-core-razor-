@@ -1,6 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Components.Web
 
-<div class="float-toolbar ztoolbar" id="crop_toolbar" html-canvas-ignore>
+<div class="float-toolbar ztoolbar" id="crop_toolbar">
     <div>
         <div class="crop-toolbar-item" style="background-position: 100px 100px ;"></div>
         <div class="crop-toolbar-item" style="background-position: -1120px 0px ;" onclick="moveInnerImage('U')"></div>
@@ -15,8 +15,8 @@
         <div class="crop-toolbar-item" style="width:auto; background-position: 100px 100px ; cursor:default" ><div id="crop_slider"></div></div>
         <div class="crop-toolbar-item" style="background-position: -1184px 0px ;" onclick="zoomInInnerImage()"><span>Zoom In</span></div>
         <div class="crop-toolbar-item" style="background-position: 100px 100px ;"></div>
-        <div class="crop-toolbar-item" style="background-position: -688px 0px ;" onclick="rotateInnerImage(90)"><span>Rotate 90&deg;</span></div>
-        <div class="crop-toolbar-item" style="background-position: -704px 0px ;" onclick="rotateInnerImage(-90)"><span>Rotate 90&deg;</span></div>
+        <div class="crop-toolbar-item rotateRight" style="background-position: -688px 0px ;"><span>Rotate 90&deg;</span></div>
+        <div class="crop-toolbar-item rotateLeft" style="background-position: -704px 0px ;"><span>Rotate 90&deg;</span></div>
     </div>
     <div>
         <div class="crop-toolbar-item" style="background-position: 100px 100px ;"></div>

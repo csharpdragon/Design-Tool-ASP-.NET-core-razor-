@@ -35,23 +35,12 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+  
+    @RenderBody()
+        
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - Design - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
-    <div class="site-main-container" id="main_content">
-<div class="overlay-vistool">
-                    <div class="vistool-webgl" style="width: 1000px; height: 714px;">
-                    <canvas width="1000"  height="714" style="width: 1000px; height: 714px;"></canvas>
-                </div>
-    
+ <div class="site-main-container" id="main_content">
+    <div class="overlay-vistool">   
     </div>
     <div id="preview_bar">
         <div class="toolbar-button type5 dt-base-gradient with-active"
@@ -68,7 +57,6 @@
     </div>
 </div>
 
- 
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>

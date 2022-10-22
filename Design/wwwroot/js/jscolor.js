@@ -10,7 +10,7 @@
  * See usage examples at http://jscolor.com/examples/
  */
 
-
+window.lastPickerOwner = false;
 (function (global, factory) {
 
 	'use strict';
@@ -2119,18 +2119,27 @@ var jsc = {
 			return this.toGrayscale() > 255 / 2;
 		};
 
-
+		this.changedCount = 0;
 		this.hide = function () {
+			window.lastPickerOwner = false;
 			if (isPickerOwner()) {
+				if (this.changedCount > 0) {
+					
+					colorPickerHided();
+				}
 				detachPicker();
 			}
 		};
 
 
 		this.show = function () {
+			if (window.lastPickerOwner) {
+				colorPickerHided();
+			}
+			window.lastPickerOwner = true;
+			this.changedCount = 0;
 			drawPicker();
 		};
-
 
 		this.redraw = function () {
 			if (isPickerOwner()) {
@@ -2180,6 +2189,8 @@ var jsc = {
 
 
 		this.exposeColor = function (flags) {
+
+			this.changedCount++;
 
 			var colorStr = this.toString();
 			var fmt = this.getFormat();

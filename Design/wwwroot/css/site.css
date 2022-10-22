@@ -16,7 +16,13 @@ html {
 body {
   margin-bottom: 60px;
 }
-
+header{
+    position: sticky;
+    top: 0px;
+    z-index: 5000;
+    left: 0px;
+    width: 100%;
+}
 .headerLogoImage {
     height: 45px;
     padding-top: 10px;
@@ -95,10 +101,57 @@ body {
     align-items: center;
     background-color: rgba(0,0,0,0.7)
 }
+.first-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    top:0px;
+    justify-content:center;
+    align-items:center;
+    z-index: 3000;
+}
+#orientation_wrapper {
+    width: 600px;
+    height: 265px;
+    z-index:1;
+    background-color: white;
+}
 
-#top_toolbar_placeholder_wrapper{
+label > span {
+ 
+}
+#top_toolbar_placeholder_wrapper {
     display: contents;
 }
 #top_toolbar_placeholder {
     z-index: 500;
+}
+#image_toolbar{
+    z-index:400;
+}
+.crop_toolbar{
+    display: flex;
+}
+.sticky{
+    position: sticky;
+    top: 65px;
+}
+
+/*//////////*/
+.vline{
+   background-color: rgba(0,0,0,0.3);
+   height: 1px;
+   width: 100%;
+   position: absolute;
+}
+.hline {
+    background-color: rgba(0,0,0,0.3);
+    height: 100%;
+    width: 1px;
+    position: absolute;
 }
